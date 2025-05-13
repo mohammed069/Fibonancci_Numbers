@@ -21,7 +21,7 @@ class MyText extends StatelessWidget {
             alignment: Alignment.centerRight,
             child: InkWell(
               child: Text(
-                Parameters.result4,
+                Parameters.result4, // result4 is more info
                 style: TextStyle(color: Colors.blue[300], fontSize: 16),
               ),
               onTap: () {

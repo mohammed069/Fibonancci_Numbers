@@ -1,3 +1,5 @@
+import 'package:algo_project/logic/algorithms.dart';
+import 'package:algo_project/widgets/my_chart.dart';
 import 'package:flutter/material.dart';
 
 class TabulatedScreen extends StatefulWidget {
@@ -10,6 +12,16 @@ class TabulatedScreen extends StatefulWidget {
 class _TabulatedScreenState extends State<TabulatedScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.blue.shade50,
+        appBar: AppBar(
+          backgroundColor: Colors.blue.shade50,
+          title: const Text('Tabulated Fibonacci Chart'),
+        ),
+        body: Center(child: MyChart(fibOf: Algorithms.tabulatedFib)),
+      ),
+    );
   }
 }

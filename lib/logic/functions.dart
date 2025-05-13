@@ -23,9 +23,11 @@ class Functions {
       Parameters.recursiveTime = avgRec;
       Parameters.buffer1.write('Recursive:\n');
       Parameters.buffer1.writeln('Result = $recValue');
-      Parameters.buffer1.write('Avg Time = $avgRec µs (5 runs)');
+      Parameters.buffer1.writeln('Avg Time = $avgRec µs (5 runs)');
+      Parameters.buffer1.write('Time Complexity = O(2^n)');
     } else {
       Parameters.buffer1.writeln('Recursive:');
+      Parameters.buffer1.writeln('Time Complexity = O(2^n)');
       Parameters.buffer1.write('Skipped (n > 40 – too slow)');
     }
 
@@ -34,22 +36,24 @@ class Functions {
       Algorithms.memoizedFib,
       Parameters.n,
     );
-    int memoValue = Algorithms.memoizedFib(Parameters.n);
+    BigInt memoValue = Algorithms.memoizedFib(Parameters.n);
     Parameters.memoTime = avgMemo;
 
     int avgTab = Algorithms.calculateTime(
       Algorithms.tabulatedFib,
       Parameters.n,
     );
-    int tabValue = Algorithms.tabulatedFib(Parameters.n);
+    BigInt tabValue = Algorithms.tabulatedFib(Parameters.n);
     Parameters.tabTime = avgTab;
 
     Parameters.buffer2.writeln('Memoization:');
     Parameters.buffer2.writeln('Result = $memoValue');
-    Parameters.buffer2.write('Avg Time = $avgMemo µs (1000 runs)');
+    Parameters.buffer2.writeln('Avg Time = $avgMemo µs (1000 runs)');
+    Parameters.buffer2.write('Time Complexity = O(n)');
 
     Parameters.buffer3.writeln('Tabulation:');
     Parameters.buffer3.writeln('Result = $tabValue');
-    Parameters.buffer3.write('Avg Time = $avgTab µs (1000 runs)');
+    Parameters.buffer3.writeln('Avg Time = $avgTab µs (1000 runs)');
+    Parameters.buffer3.write('Time Complexity = O(n)');
   }
 }

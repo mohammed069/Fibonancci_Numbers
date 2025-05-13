@@ -5,16 +5,17 @@ import 'package:algo_project/screens/recursive_screen.dart';
 import 'package:algo_project/screens/tabulated_screen.dart';
 import 'package:algo_project/widgets/my_elevated_button.dart';
 import 'package:algo_project/widgets/my_text.dart';
+
 import 'package:flutter/material.dart';
 
-class FibonacciHomePage extends StatefulWidget {
-  const FibonacciHomePage({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<FibonacciHomePage> createState() => _FibonacciHomePageState();
+  State<HomeScreen> createState() => _FibonacciHomePageState();
 }
 
-class _FibonacciHomePageState extends State<FibonacciHomePage> {
+class _FibonacciHomePageState extends State<HomeScreen> {
   final _textFormKey = GlobalKey<FormState>();
 
   void calculateAndCompare2() {

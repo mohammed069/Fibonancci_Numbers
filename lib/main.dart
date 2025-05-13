@@ -13,7 +13,7 @@ class FibonacciApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Fibonacci Numbers',
-      home: const FibonacciHomePage(),
+      home: const HomeScreen(),
     );
   }
 }
